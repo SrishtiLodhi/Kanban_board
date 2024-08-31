@@ -279,7 +279,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="container-fluid m-0 bg-light">
-          <KanbanBoard tasks={tasks} setTasks={setTasks} />;
+          <KanbanBoard tasks={tasks} setTasks={setTasks} />
         </div>
       </div>
       <Modal

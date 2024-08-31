@@ -6,6 +6,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import verified from "../assets/verified.png";
 import img from "../assets/KJS2oI01.svg";
+import loader from "../assets/loader.svg";
 
 function TaskCard({ task, deleteTask, updateTask }) {
   const [showModal, setShowModal] = useState(false);
@@ -81,10 +82,13 @@ function TaskCard({ task, deleteTask, updateTask }) {
             </div>
 
             <div className="fw-medium" style={{ color: "#8c7c7c" }}>
-             <li>3 Jan, 4:35 PM</li> 
+              <li>3 Jan, 4:35 PM</li>
             </div>
           </div>
-          <img src={img} alt="img" style={{ width: "10%" }} />
+
+          <img src={img} alt="img" style={{ width: "8%" }} />
+
+     
         </div>
         <div
           className="case-details pt-2 pb-3 fw-medium"
@@ -94,7 +98,7 @@ function TaskCard({ task, deleteTask, updateTask }) {
         </div>
 
         <div className="d-flex flex-row align-items-center justify-content-between pb-0">
-          <div className="gap-2 d-flex ">
+          <div className="gap-2 d-flex justify-content-between flex-fill">
             <div
               className={`mb-0 rounded-4 text-light fw-medium fs-5 ${
                 task.taskPriority === "Critical"
@@ -119,10 +123,14 @@ function TaskCard({ task, deleteTask, updateTask }) {
               {task.taskPlatform}
             </div>
 
-            <div>{task.taskRating}</div>
+            <div className="d-flex gap-1 align-items-center fw-medium">
+              {" "}
+              <img src={loader} alt="loader" style={{ width: "25%" }} />
+              <span>{task.taskRating}</span>
+            </div>
           </div>
-          <div className="d-flex justify-content-end">
-            <img src={verified} className="w-25" />
+          <div className="d-flex justify-content-end col-2">
+            <img src={verified} className="w-50" />
           </div>
         </div>
       </div>
