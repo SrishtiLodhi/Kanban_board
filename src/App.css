@@ -1,0 +1,341 @@
+:root {
+  --background-color: #f2f2f2;
+  --primary-bg: #f0f5f9;
+  --secondary-color: #4f46e5;
+  --text-color: #00171F;
+  --link-color: #61dafb;
+  --secondary: #497380;
+  --montserrat: 'Montserrat', sans-serif;
+  --border: #eeebeb;
+  --img: #03002e;
+  --highlight: #d5e9f6;
+  --gray: #F8FAFC;;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: 'roboto-regular', sans-serif; /* Apply Montserrat font to the entire body */
+}
+
+h1, h2, h3, h4, h5, h6, p, label, input, button, div {
+  font-family: 'Roboto', sans-serif !important;
+  color: var(--text-color);
+}
+
+.w-10 { width: 10%; }
+.w-20 { width: 20%; }
+.w-30 { width: 30%; }
+.w-35 { width: 35%; }
+.w-40 { width: 40%; }
+
+.fs-1{
+  font-size: 1rem !important;
+  line-height: normal !important;
+}
+
+.fs-5{
+  font-size: 0.8rem !important;
+  line-height: normal !important;
+}
+
+.border-radius-1{
+  border-radius: 0.5rem !important;
+}
+.custom-modal-width .modal-dialog{
+  max-width: 75%;
+}
+
+.text-primary {
+  background-color: var(--secondary-color) !important;
+  color: white;
+}
+
+.transparent {
+  background-color: rgba(204,200,218,0.5);
+}
+
+.bg{
+background-color: var(--gray) !important;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+}
+
+.lined-input {
+  border: none;
+  border-bottom: 2px solid var(--border);; /* Change to desired color */
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  padding: .2rem;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.lined-input:focus {
+  border-bottom-color: var(--secondary-color); /* Change to the desired focus color */
+  box-shadow: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it's above other content */
+}
+
+.step-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9rem; /* equivalent to w-36 in Tailwind */
+}
+
+.step-item:not(:first-child):before {
+  content: '';
+  background-color: #cbd5e0; /* equivalent to bg-slate-200 in Tailwind */
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  right: 50%;
+  top: 33%; /* equivalent to top-1/3 in Tailwind */
+  transform: translateY(-50%); /* equivalent to -translate-y-2/4 in Tailwind */
+}
+
+.step {
+  width: 2.5rem; /* equivalent to w-10 in Tailwind */
+  height: 2.5rem; /* equivalent to h-10 in Tailwind */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  background-color: var( --background-color);  /* equivalent to bg-slate-700 in Tailwind */
+  border-radius: 9999px; /* equivalent to rounded-full in Tailwind */
+  font-weight: 600; /* equivalent to font-semibold in Tailwind */
+  color: black; /* equivalent to text-white in Tailwind */
+}
+
+.active .step {
+  background-color: var(--secondary-color); /* equivalent to bg-sky-600 in Tailwind */
+  color: #fff;
+}
+
+.bg-light{
+  background-color: #fff !important; 
+}
+
+.complete .step {
+  background-color: #38a169; /* equivalent to bg-green-600 in Tailwind */
+  color: #fff;
+}
+
+.complete p {
+  color: #151414; /* equivalent to text-white in Tailwind */
+}
+
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  background-color: #38a169; /* equivalent to bg-green-600 in Tailwind */
+}
+
+.personal-info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.border-top-blue {
+  border-top: 3px solid blue !important;
+}
+
+.list-group-item.active{
+  background-color: var(--highlight);
+  color: var(--secondary-color);
+}
+.list-group-item{
+  border-top-right-radius: 1rem !important; /* Adjust the value as needed */
+  border-top-left-radius: 0;    /* No rounding on the top-left corner */
+  border-bottom-left-radius: 0; 
+  border-bottom-right-radius: 1rem !important; 
+  padding: 0.8rem;
+}
+.modal-75w {
+  width: 75%;
+  max-width: 75%;
+}
+
+/* Default color for the images */
+.list-group-item img {
+  filter: none;
+}
+
+.list-group-item.active img {
+  fill: #4f46e5; /* Apply the desired color */
+}
+
+
+/* Add this CSS to your stylesheet or in a <style> tag in your component */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Ensure it is above the Bootstrap modal */
+}
+
+.modal-content-inner {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  z-index: 1051; /* Ensure it is above the modal overlay */
+}
+
+.bold{
+padding: 8px 12px 8px 8px;
+gap: 12px;
+background: #4F46E5;
+border-radius: 24px;
+color: white !important;
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height, or 138% */
+letter-spacing: -0.007em;
+color: #FFFFFF;
+}
+
+.task-card{
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 12px;
+background: #FFFFFF;
+border: 1px solid #E2E8F0;
+box-shadow: 0px 4px 8px -2px rgba(23, 23, 23, 0.1), 0px 2px 4px -2px rgba(23, 23, 23, 0.06);
+border-radius: 24px;
+}
+
+.dropdown-toggle::after{
+  display: none;
+}
+
+.circle{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+gap: 10px;
+width: 37px;
+height: 37px;
+border: 1px solid #CBD5E1;
+border-radius: 123px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a8adb14f;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a8adb1;
+}
+
+.custom-button {
+  border-radius: 0.5rem;
+  border: 2px dashed rgb(217, 213, 213); /* Change color as needed */
+  background-color: transparent; /* Or another color */
+  font-weight: 600;
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+  color: #484242;
+  font-size: 0.9rem;
+}
+.custom-button:hover, .custom-button:focus, .custom-button:active, .custom-design:focus, .custom-design:active, .custom-design:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  cursor: pointer;
+  border: 2px dashed rgb(217, 213, 213) !important;
+}
+
+.custom-design{
+  border: 2px solid rgb(224, 218, 218);
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.bg-red-500{
+  background-color: rgb(210, 6, 6);
+}
+
+.bg-orange-500{
+  background-color: rgb(238, 157, 5);
+}
+
+.bg-yellow-500{
+  background-color: rgb(207, 207, 2);
+}
+
+.bg-purple-500{
+  border: 1px solid rgb(230, 171, 230);
+  color: purple;
+  background-color: rgb(237, 225, 237);
+}
+
+.bg-blue-500{
+  border: 1px solid rgb(169, 169, 214);
+  color: blue;
+  background-color: rgb(215, 215, 249);
+}
+
+.fs-5{
+  font-size: 0.8rem !important;
+  padding: 0.4rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
