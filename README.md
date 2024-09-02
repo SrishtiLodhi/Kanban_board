@@ -50,7 +50,6 @@ To run this project locally, follow these steps:
 4. Push your branch to your forked repository.
 5. Open a Pull Request to merge your changes.
 
-## License
+## Images
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+![Kanban Board app](https://github.com/user-attachments/assets/5e6c2177-fd09-448d-bfad-29152bb97feb)
