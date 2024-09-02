@@ -24,7 +24,7 @@ function EditTaskModal({ show, onHide, task, updateTask, deleteTask }) {
   };
 
   return (
-    <Modal show={show} onHide={onHide} size="lg" dialogClassName="modal-75w">
+    <Modal show={show} onHide={onHide} size="lg" dialogClassName="modal-75w" className="d-flex justify-content-center">
       <Modal.Header
         closeButton
         onClick={(e) => {
