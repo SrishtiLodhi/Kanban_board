@@ -213,69 +213,77 @@ const HomePage = () => {
           </div>
         </nav>
         <div className="p-3 pt-0">
-          <div className="d-flex align-items-center">
-            {/* Search Bar with Icon in Placeholder */}
+          <div className="d-flex align-items-center sm-column small-font">
+<div className="d-flex">
             <div className="position-relative me-2">
               <Form.Control
                 type="search"
                 placeholder="Search by issue name..."
-                className="custom-design fw-medium"
+                className="custom-design fw-medium small-font custom-design-sm"
                 style={{ paddingLeft: "2.3rem", color: "#d3d3d3" }}
               />
               <img
                 src={searchIcon}
                 alt="Search Icon"
-                className="position-absolute top-50 start-0 translate-middle-y ms-2"
+                className="position-absolute top-50 start-0 translate-middle-y ms-2 icon-sm"
                 style={{ width: "1.5rem" }}
               />
             </div>
 
             {/* Sort Button */}
             <Button
-              className="custom-design d-flex align-items-center"
+              className="custom-design d-flex align-items-center small-font"
               style={{ color: "#484242" }}
             >
               <img
                 src={updown}
                 alt="Plus Icon"
                 style={{ width: "1.1rem", marginRight: "0.4rem" }}
+                className="plus-icon"
               />
               Sort By
             </Button>
 
             {/* Custom Button */}
-            <Button className="custom-button px-3 d-flex align-items-center">
+            <Button className="custom-button px-3 d-flex align-items-center small-font">
               <img
                 src={plus}
                 alt="Plus Icon"
                 style={{ width: "1.1rem", marginRight: "0.4rem" }}
+                 className="plus-icon"
               />
               Assigned To
             </Button>
-            <Button className="custom-button px-3 d-flex align-items-center">
+            </div>
+            <div className="d-flex pt-sm">
+            <Button className="custom-button px-3 d-flex align-items-center small-font">
               <img
                 src={plus}
                 alt="Plus Icon"
                 style={{ width: "1.1rem", marginRight: "0.4rem" }}
+                 className="plus-icon"
               />
               Severity
             </Button>
-            <Button className="custom-button px-3 d-flex align-items-center">
+            <Button className="custom-button px-3 d-flex align-items-center small-font">
               <img
                 src={plus}
                 alt="Plus Icon"
                 style={{ width: "1.1rem", marginRight: "0.4rem" }}
+                 className="plus-icon"
               />
               Status
             </Button>
-            <Button className="custom-button px-3 d-flex align-items-center">
+            <Button className="custom-button px-3 d-flex align-items-center small-font">
               <img
                 src={plus}
                 alt="Plus Icon"
                 style={{ width: "1.1rem", marginRight: "0.4rem" }}
+                 className="plus-icon"
               />
               Pentest
             </Button>
+            </div>
           </div>
         </div>
         <div className="container-fluid m-0 bg-light">

@@ -125,7 +125,7 @@ function TaskCard({ task, deleteTask, updateTask }) {
 
             <div className="d-flex gap-1 align-items-center fw-medium">
               {" "}
-              <img src={loader} alt="loader" style={{ width: "25%" }} />
+              <img src={loader} alt="loader" className="loader-sm" style={{ width: "25%" }} />
               <span>{task.taskRating}</span>
             </div>
           </div>

@@ -62,7 +62,7 @@ function KanbanBoard({ tasks, setTasks }) {
         onDragEnd={onDragEnd}
         onDragOver={onDragOver}
       >
-        <div className="d-flex gap-3">
+        <div className="d-flex gap-3 sm-responsive">
           <SortableContext items={columnsId}>
             {columns.map((col) => (
               <ColumnContainer

@@ -56,7 +56,7 @@ function ColumnContainer({
   };
 
   return (
-    <div ref={setNodeRef} style={style} className="d-flex flex-column p-2">
+    <div ref={setNodeRef} style={style} className="d-flex flex-column p-2 w-sm-100">
       <div
         {...attributes}
         {...listeners}
